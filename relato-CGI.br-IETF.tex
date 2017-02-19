@@ -3,17 +3,21 @@
 \usepackage{sbc-template}
 \usepackage[utf8]{inputenc}
 \usepackage{url}
-\usepackage[page]{appendix}
+%\usepackage[page]{appendix}
 \usepackage{graphicx}
 
-\title{Experience Report about the Participation of Researchers of the Federal University of Rio Grande do Sul on the Internet Engineering Task Force}
+\title{Relato sobre a Participação no the Internet Engineering Task Force dos Projetos Aprovados na Chamada Pública 0001/2014 do Comitê Gestor da Internet no Brasil}
 
-\author{J{\'e}ferson Campos Nobre, Lisandro Zambenedetti Granville}
+\author{J{\'e}ferson Campos Nobre\inst{1}, Lisandro Zambenedetti Granville\inst{1},\\ Klaus Wehmuth\inst{2}, Artur Ziviani\inst{2},\\ Marcelo Santos\inst{3}, Felipe Lopes\inst{3}, Leonidas Lima\inst{3}, Stenio Fernandes\inst{3}}
 
 \address{Institute of Informatics -- Federal University of Rio Grande do Sul
-  (UFRGS)\\
-  Porto Alegre -- RS -- Brasil\\
-\texttt{jcnobre@inf.ufrgs.br, granville@inf.ufrgs.br}
+  (UFRGS)
+\nextinstitute
+ Laboratório Nacional de Computação Científica (LNCC/MCTI)
+\nextinstitute
+ Universidade Federal de Pernambuco (UFPE)
+ % TODO
+  \email{\{jcnobre,granville\}@inf.ufrgs.br, }
 }
 
 \begin{document} 
@@ -22,48 +26,72 @@
 
 \begin{abstract}
 
-The present work is an experience report about the participation of the authors, a Professor and a Ph.D Student of Federal University of Rio Grande do Sul, on the Internet Engineering Task Force. Such participation is funded by the Public Call 0001/2014 of the CGI.br.
+The present work is an experience report about the participation of the authors on the Internet Engineering Task Force (IETF). Such participation is funded by the Public Call 0001/2014 of the \textit{Comitê Gestor da Internet no Brasil} (CGI.br).
 
 \end{abstract}
 
-\section{Introduction}
+\begin{resumo}
 
-% Contextualização
-% Mecanismos de medição de rede são uma técnica efetiva para a monitoração de níveis de serviço. Atualmente, essa monitoração é normalmente realizada de forma ativa ou passiva. Medição ativas, em contrapartida, são intrusivas porque as mesmas injetam tráfego na infraestrutura de rede a fim de fornecer resultados para métricas de desempenho. O \textit{IP Performance Metrics} (IPPM) WG produziu RFCs que descrevem mecanismos para medições ativas, tais como: One-Way Active Measurement Protocol (OWAMP) \cite{OWAMP-Shalunov-2006}, Two-Way Active Measurement Protocol (TWAMP) \cite{TWAMP-Hedayat-2008} e Cisco Service Level Assurance Protocol (SLA) \cite{IPSLA-Chiba-2013}.
+O presente trabalho é um relato de experiência sobre a participação dos autores no \textit{Internet Engineering Task Force} (IETF). Tal participação é financiada pela Chamada Pública 0001/2014 do Comitê Gestor da Internet no Brasil (CGI.br).
 
-The Internet Engineering Task Force (IETF), along with the Internet Research Task Force (IRTF), is the leading international forum for standardization of Internet technologies. Despite the importance of Brazil in the international context (and specially in the Computer Science area), the participation of Brazilians in the IETF is small. There are financial difficulties for such participation, since funding opportunities are lower than those provided by other countries. In this context, the Public Call 0001/2014\footnote{\textit{Seleção Pública de Propostas para Participação em Grupos de Trabalho e Reuniões do IETF/IRTF Janeiro/2014} - http://cgi.br/editais/ver/2}, funded by the CGI.br, provides a significant aid for the development of joint activities between the IETF/IRTF and members of Brazilian research institutions and vendors.
+\end{resumo}
 
-% Início da relação
-% \cite{P2PBNM-Nobre-2013a}
-% \cite{P2PBNM-Nobre-2013b}
+\section{Introdução}
 
-The support for network service level requirements has become a critical concern in several Working Groups (WGs) of the IETF and Research Groups (RGs) of the IRTF. The topic of the Ph.D. thesis proposal of one of the authors, graduate student at the Federal University of Rio Grande do Sul (\textit{Universidade Federal do Rio Grande do Sul} - UFRGS), is related with the monitoring of such requirements (service level monitoring). In this context, preliminary aspects of such thesis proposal were presented at two meetings of Network Management Research Group (NMRG) of the IRTF: the NMRG 31\textsuperscript{st} Meeting (1\textsuperscript{st} Workshop on Large Scale Network Measurements), presentation conducted by the student doctoral advisor, and the 32\textsuperscript{nd} NMRG Meeting (Autonomics for Network Management), presentation conducted by the doctoral student himself. These presentations confirmed that there was interest in the context of IETF/IRTF to the service level monitoring aspects investigated by the student. In addition to the presentations themselves, interactions with members of different WGs, such as the IP Performance Metrics (IPPM) WG and Large-Scale Measurement of Broadband Performance (LMAP) WG, also showed that the participation in the IETF meetings could beneficial for the authors. However, financial support was necessary for such participation, thus initiatives like CGI.br's Public Call 0001/2014 are essential. The authors of the present paper applied and were granted in this call.
+% http://cgi.br/noticia/cgi-br-divulga-resultado-da-selecao-publica-para-o-ietf-e-irtf/10043
 
-% ANIMA/UCAN
-% considerando a arquitetura descrita na RFC 6812 \cite{IPSLA-Chiba-2013}
-
-The Autonomics for Network Management discussion hosted by the NMRG preceded the Use Cases for Autonomic Networking (UCAN) Bird of a Feather (BoF). This BOF was intended to expose several use cases to community review and to identify other possible use cases regarding Autonomic Networking (AN). The fundamental goal of AN is self-management, including self-CHOP properties (self-configuration, self-healing , self-optimization, and self-protection), in order to minimize dependency on human administrators and central management systems. One of the capabilities pointed out by the UCAN chairs was the ability for distributed entities to self-adapt their decision making process based on information and knowledge gained from their environment, which is directly related with the Ph.D. thesis proposal of one of the authors. In this context, there was an opportunity to write an Internet-Draft (I-D) describing the use case for AN in distributed detection of Service Level Agreement (SLA) violations \cite{NMRG-Nobre-2015}. This I-D was presented as one of the series of use cases intended to illustrate requirements for AN in the UCAN BoF and it was adopted by the NMRG. This BoF leaded to the formation of the Autonomic Networking Integrated Model and Approach (ANIMA) WG.
-
-% Kostas
-
-Several documents were in the NMRG produced to transform the abstract AN concept into concrete requirements. However, there is an ongoing discussion in this RG about the initial set of definitions employed on AN and how to move forward with standardizing AN aspects. Thus, an I-D was proposed to revisit the AN terminology established in peer-reviewed literature and to contribute such discussion \cite{NMRG-Pentikousis-2015}. In this context, one of the authors of the present paper was invited to contributed to such I-D, specially concerning Autonomic Monitoring aspects. The I-D was presented in the 35\textsuperscript{th} and 36\textsuperscript{th} NMRG meetings in order to collect feedback. The next step for this I-D is calling for adoption by the NMRG.
-
-% futuro
-% SUPA
-
-Several research topics investigated in the Computer Networks Research Group of UFRGS\footnote{\textit{Grupo de Redes de Computadores do Intituto de Informática da Universidade Federal do Rio Grande do Sul} - http://networks.inf.ufrgs.br/} are related to different IETF WGs. One of the most important research lines of such group is Policy-Based Network Management (PBNM). This research line is related to the Simplified Use of Policy Abstractions (SUPA) BoF which was held in IETF 92. This BoF was aimed at the challenges to deploy new services and to manage networks to maintain the stability and availability of critical services by network operators in the context of the complexity of modern networks. Thus, it is necessary to streamline the operations and the deployment of new services, which can be done through the programmatic control of network elements with service and policy models \cite{SUPA-Karagiannis-2015}. 
-
-%Thus, as the efforts expended by the LMAP WG to standardize broadband performance measurements on a large scale mechanisms can be hampered by issues related to human resources required. Finally, only a subset of network destinations are monitored to conserve resources, which allows violations to be lost at the expense of monitoring processes of non-problematic destinations.
-
-\section{Final Remarks}
-
-%Dessa forma, além dos relatórios detalhados reportando a participação nas reuniões do IETF/IRTF, o proponente apresentará os internet-drafts relativos ao trabalho junto ao NMRG, LMAP, IPFIX e IPPM. Além disso, serão produzidos relatórios das apresentações realizadas para o Grupo de Pesquisa de Redes de Computadores da UFRGS, assim como das ações decorrentes das mesmas.
-
-The participation of the authors on the IETF is beneficial for the authors themselves as well as for the Brazilian insertion in the IETF. The experiences gained in such participation can be shared through activities conducted at UFRGS, the university of the authors. This could help that other students and researchers get involved in areas related to Internet development and standardization according to their respective investigations.
+O \textit{Internet Engineering Task Force} (IETF), em conjunto com o \textit{Internet Research Task Force} (IRTF), é o principal fórum internacional de padronização de tecnologias para a Internet. Apesar da importância do Brasil no contexto internacional (e especialmente na área de Ciência da Computação), a participação de brasileiros no IETF é pequena. Dificuldades financeiras podem ser citadas para tal participação, já que as oportunidades de financiamento são menores do que aquelas oferecidas em outros países. Neste contexto, a Chamada Pública 0001/2014\footnote{\textit{Seleção Pública de Propostas para Participação em Grupos de Trabalho e Reuniões do IETF/IRTF Janeiro/2014} - http://cgi.br/editais/ver/2}, financiada pelo CGI.br, proporciona um auxílio significativo para o desenvolvimento de atividades conjuntas entre o IETF/IRTF e membros de instituições de pesquisa e fabricantes de equipamentos baseados no Brasil.
 
 %
 
-Currently, the organization of remote hubs for IETF meetings is being performed in UFRGS. These hubs can broad the audience in such meetings and the Brazilian participation as a whole.
+A Chamada Pública 0001/2014 selecionou 4 participações nas reuniões do IETF: o projeto ``Utilização de Tecnologia Par-a-Par para Controle Autonômico Distribuídos de Sondas de Monitoramento em Redes de Computadores", dos autores Jéferson Nobre e Lisandro Granville, representando a Universidade Federal do Rio Grande do Sul (UFRGS); o projeto ``Metrologia e ciência de redes aplicadas à Internet", dos autores Klaus Wehmuth e Artur Ziviani, representando o Laboratório Nacional de Computação Científica (LNCC/MCTI); e o projeto ``Redes Definidas por Software considerando cenários com Virtualização de Funções da Rede", dos autores Marcelo Santos, Felipe Lopes, Leonidas Lima e Stênio Fernandes, representando a Universidade Federal de Pernambuco (UFPE). Além destes, também foi selecionado o apoio à participação de Denis Michellis, na modalidade de profissionais vinculados à indústria de redes nacional, funcionário da instituição Telefônica Brasil SA.
+
+% organização
+
+O presente relato está organizado da seguinte forma. Inicialmente, será realizada a descrição das atividades realizadas no contexto da Chamada Pública 0001/2014 do CGI.br. Tal descrição está dividida por questões didáticas de acordo com os diferentes projetos aprovados nessa chamada. Em seguida, serão apresentados comentários finais e algumas possibilidades a serem desenvolvidas.
+
+\section{Descrição das Atividades Realizadas}
+
+\subsection{Utilização de Tecnologia Par-a-Par para Controle Autonômico Distribuídos de Sondas de Monitoramento em Redes de Computadores}
+
+% Início da relação
+
+O suporte para requisitos de nível de serviço de rede tornou-se uma preocupação crítica em vários Grupos de Trabalho (\textit{Working Groups} - WGs) do IETF e grupos de pesquisa (\textit{Research Groups} - RGs)do IRTF. O tema da tese de doutorado de um dos autores, o qual era aluno da Universidade Federal do Rio Grande do Sul (UFRGS), está relacionada com o controle de tais requisitos (monitoramento de níveis de serviço) através de mecanismos de medição ativa de rede (e.g., \textit{One-Way Active Measurement Protocol} (OWAMP) \cite{OWAMP-Shalunov-2006}, \textit{Two-Way Active Measurement Protocol} (TWAMP) \cite{TWAMP-Hedayat-2008} e \textit{Cisco Service Level Assurance Protocol} (SLA) \cite{IPSLA-Chiba-2013}). Neste contexto, aspectos preliminares de tal tese foram apresentados em duas reuniões do Grupo de Pesquisa em Gerenciamento de Redes (\textit{Network Management Research Group} - NMRG) do IRTF: o NMRG 31 \textsuperscript{st} \textit{Meeting} (1\textsuperscript{st} \textit{Workshop on Large Scale Network Measurements}) \cite{P2PBNM-Nobre-2013a}, e a 32\textsuperscript{nd} NMRG \textit{Meeting} (\textit{Autonomics for Network Management}) \cite{P2PBNM-Nobre-2013b}, apresentações realizadas pelos autores. Essas apresentações confirmaram que havia interesse no contexto da IETF/IRTF aos aspectos de monitoramento de nível de serviço investigados na tese de doutorado citada. Além das apresentações, as interações com membros de diferentes WGs, como o IP \textit{Performance Metrics} (IPPM) WG e o Large-Scale Measurement of Broadband Performance (LMAP) WG, também demostraram que a participação nas reuniões do IETF poderia ser benéfica para a pesquisa realizada pelos autores. No entanto, o apoio financeiro necessário para tal participação é essencial, tal como o fornecido pela Chamada Pública do CGI.br 0001/2014.
+
+% ANIMA/UCAN
+
+A discussão sobre o tema \textit{Autonomics for Network Management}, proposta pelo NMRG, o \textit{Use Cases for Autonomic Networking} (UCAN) Bird of a Feather (BoF). Tal BOF foi destinado para discutir casos de uso de \textit{Autonomic Networking} (AN) com a comunidade do IETF assim como identificar outros possíveis casos. O objetivo fundamental da AN é o \textit{self-management}, incluindo propriedades auto-CHOP (\textit{self-configuration}, \textit{self-healing}, \textit{self-optimization}, e \textit{self-protection}), a fim de minimizar a dependência de administradores humanos e sistemas de gerenciamento centralizados. Um dos recursos de interesse apontados pelos coordenadores UCAN foi a capacidade de entidades distribuídas para apresentar processos de tomada de decisão adaptativos com base em informações e conhecimentos adquiridos a partir do seu ambiente, o que que está diretamente relacionado com a tese de um dos autores. Neste contexto, houve uma oportunidade para escrever um Internet-Draft (I-D), descrevendo a detecção distribuída de violações de SLA \cite{NMRG-Nobre-2015}.  Este I-D foi apresentado no UCAN BoF e foi adotado pela NMRG (atualmente em \textit{Working Group Last Call}). Posteriormente, tal BoF propiciou a  a formação do \textit{Autonomic Networking Integrated Model and Approach} (ANIMA) WG.
+
+% Kostas
+
+Diversos documentos foram produzido no NMRG para transformar conceitos abstratos de AN em requisitos concretos. No entanto, há uma discussão em curso neste RG sobre o conjunto inicial de definições empregadas em AN e como avançar para a padronização de aspectos de AN. Assim, um I-D foi proposto para revisitar a terminologia de AN estabelecida na literatura da comunidade de gerenciamento de redes \cite{NMRG-Pentikousis-2015}. Nesse contexto, um dos autores do presente trabalho foi convidado a contribuir para tal I-D, especialmente no que se refere aos aspectos de monitoramento autonômico. O I-D foi apresentado nos 35\textsuperscript{th} e 36\textsuperscript{th} NMRG \textit{meetings}, a fim de coletar feedback. O próximo passo para tal I-D é pedir a adoção pelo NMRG.
+
+% futuro
+
+Novas possibilidades de trabalhos no contexto do IETF são possíveis considerando a utilização de tecnologia par-a-par para controle autonômico distribuído de sondas de monitoramento em redes de computadores. Por exemplo, as iniciativas proposta pelo \textit{Large Scale Measurement of Broadband Performance} (LMAP) WG para padronizar mecanismos de medição de desempenho em banda larga podem ser dificultadas devido aos recursos humanos necessário. Dessa forma, um controle autonômico poderia auxiliar na operação em larga escala de tais mecanismos. Finalmente, pretende-se realizar a escrita de um I-D para o ANIMA WG descrevendo um \textit{Autonomic Service Agent} (ASA) que execute o controle autonômico distribuído de medições usando a infraestrutura ANIMA (e.g., o \textit{Autonomic Control Plane} - ACP).
+
+\subsection{Metrologia e Ciência de Redes Aplicadas à Internet}
+
+\subsection{Redes Definidas por Software Considerando Cenários com Virtualização de Funções da Rede}
+
+\section{Atividades Conjuntas}
+
+% TODO
+% Participação nos encontros IETF-LAC
+
+% TODO
+% palestras, etc
+
+% TODO
+% remote hubs
+
+A participação nos WGs e RGs facilita a organização de hubs remotos para os IETF \textit{meetings}. Tais hubs podem ampliar a audiência nesses \textit{meetings} e também a participação brasileira como um todo.
+
+\section{Comentários Finais}
+
+% TODO
+
+A participação dos pesquisadores dos projetos contemplados on the IETF a Chamada Pública 0001/2014 do Comitê Gestor da Internet no Brasil foi benéfica para os próprios pesquisadores assim como para a inserção brasileira no IETF. A experiência ganha em tal participação tem sido compartilhada nas instituições dos pesquisadores, o que pode auxiliar no desenvolvimento e padronização de protocolos para a Internet.
 
 \bibliographystyle{sbc}
 \bibliography{phd-bibtex}
